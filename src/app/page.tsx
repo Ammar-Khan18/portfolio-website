@@ -23,7 +23,7 @@ export default function Home() {
     canvas.width = width;
     canvas.height = height;
 
-    let particles = Array.from({ length: 80 }, () => ({
+    const particles = Array.from({ length: 80 }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       r: Math.random() * 1.5 + 0.5,
@@ -35,7 +35,7 @@ export default function Home() {
       if (!ctx) return;
 
       ctx.clearRect(0, 0, width, height);
-      for (let p of particles) {
+      for (const p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
         ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
