@@ -16,7 +16,7 @@ export default function Resume() {
         </p>
 
         <a
-          href="https://drive.google.com/file/d/1KH3gQd482SVaGfDdod8f7B13xc4ZTh3p/view?usp=sharing"
+          href="https://drive.google.com/file/d/1hei6OhAPP05-EVh_bS59SVTDmsuCZuO3/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow transition"
