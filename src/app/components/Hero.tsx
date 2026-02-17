@@ -25,7 +25,7 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold mb-4"
       >
-        Hi, I’m <span className="text-blue-600">Ammar</span>
+        Hi, I’m <span className="text-blue-600">Ammar Khan</span>
       </motion.h1>
 
       <motion.h2
@@ -43,7 +43,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-base md:text-lg max-w-xl mb-6 text-gray-300"
       >
-        Passionate about software development, data analytics, and AI. I love building innovative solutions and learning new technologies.
+        Passionate about software development, data analytics, and AI. I love building software solutions and learning new technologies.
       </motion.p>
 
       {/* Buttons */}
