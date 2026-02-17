@@ -7,6 +7,9 @@ import Resume from './components/Resume';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Experience from './components/Experiance';
+import Projects from './components/Projects';
+import Leadership from './components/Leadership';
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -78,6 +81,9 @@ export default function Home() {
 
       {/* Main content */}
       <Hero />
+      <Experience />
+      <Projects />
+      <Leadership />
       <Skills />
       <Resume />
       <Certifications />

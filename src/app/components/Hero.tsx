@@ -94,14 +94,19 @@ export default function Hero() {
         </motion.div>
       )}
 
-      {/* Resume Button */}
-      <motion.a
-        href="#resume"
-        className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow transition-transform transform hover:scale-105 opacity-100"
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
-        View Resume
-      </motion.a>
+{/* Resume Button */}
+<motion.a
+  href="https://drive.google.com/file/d/1l7J7Rknk1BppAy4XQbO94TvqHmVE81uy/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow transition-transform transform hover:scale-105"
+>
+  View Resume
+</motion.a>
+
     </section>
   );
 }
