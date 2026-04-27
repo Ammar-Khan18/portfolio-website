@@ -1,10 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, FileText, ExternalLink, ChevronRight, Hash } from 'lucide-react';
 import { PROJECTS } from './constants/projects';
 import ThemeToggle from './components/ThemeToggle';
 import { useState } from 'react';
+
+interface Project {
+  title: string;
+  description: string;
+  github: string;
+  icon: string;
+  link?: string;
+}
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -190,7 +197,7 @@ export default function Home() {
                   <span className={`w-2 h-2 rounded-full ${['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500'][colorIdx]}`} />
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {category.items.map((project, pIdx) => (
+                  {category.items.map((project: Project, pIdx) => (
                     <div key={pIdx} className={`group p-5 rounded-xl border ${colors[colorIdx]} transition-all duration-300 shadow-sm hover:shadow-md flex flex-col ${cardBg[colorIdx]}`}>
                       <div className="text-2xl mb-3 filter grayscale group-hover:grayscale-0 transition-all">{project.icon}</div>
                       <h4 className="text-lg font-bold mb-2 group-hover:text-notion-text transition-colors">{project.title}</h4>
@@ -203,8 +210,8 @@ export default function Home() {
                             <Github className="w-3.5 h-3.5" /> Source
                           </a>
                         )}
-                        {(project as any).link && (
-                          <a href={(project as any).link} target="_blank" className="text-xs font-medium flex items-center gap-1.5 text-notion-gray hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                        {project.link && (
+                          <a href={project.link} target="_blank" className="text-xs font-medium flex items-center gap-1.5 text-notion-gray hover:text-green-600 dark:hover:text-green-400 transition-colors">
                             <ExternalLink className="w-3.5 h-3.5" /> Demo
                           </a>
                         )}
