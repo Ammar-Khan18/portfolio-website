@@ -113,15 +113,15 @@ export default function Home() {
       {/* Hero Section */}
       <header className="mt-16 mb-12">
         <div className="relative mb-8 group">
-           <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-4xl shadow-md transform transition-transform group-hover:scale-105">
-             👨‍💻
-           </div>
+          <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-4xl shadow-md transform transition-transform group-hover:scale-105">
+            👨‍💻
+          </div>
         </div>
-        
+
         <h1 className="text-4xl font-bold mb-4 flex items-center gap-2">
           Ammar Khan
         </h1>
-        
+
         <p className="text-lg text-notion-gray mb-6 leading-relaxed max-w-2xl">
           Computer Science Student passionate about <span className="text-blue-600 dark:text-blue-400 font-medium">Software Development</span>, <span className="text-purple-600 dark:text-purple-400 font-medium">Data Analytics</span>, and <span className="text-orange-600 dark:text-orange-400 font-medium">AI</span>. Currently exploring the intersection of low-level systems and high-level AI applications.
         </p>
@@ -173,20 +173,20 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
           <span className="text-purple-500">#</span> Projects
         </h2>
-        
+
         <div className="space-y-12">
           {PROJECTS.map((category, idx) => {
             const colors = [
-              'border-blue-500/20 hover:border-blue-500/50 dark:border-blue-500/10 dark:hover:border-blue-500/30',
-              'border-purple-500/20 hover:border-purple-500/50 dark:border-purple-500/10 dark:hover:border-purple-500/30',
-              'border-green-500/20 hover:border-green-500/50 dark:border-green-500/10 dark:hover:border-green-500/30',
-              'border-orange-500/20 hover:border-orange-500/50 dark:border-orange-500/10 dark:hover:border-orange-500/30'
+              'border-blue-500/40 dark:border-blue-500/20 md:border-blue-500/20 md:hover:border-blue-500/50 dark:md:border-blue-500/10 dark:md:hover:border-blue-500/30',
+              'border-purple-500/40 dark:border-purple-500/20 md:border-purple-500/20 md:hover:border-purple-500/50 dark:md:border-purple-500/10 dark:md:hover:border-purple-500/30',
+              'border-green-500/40 dark:border-green-500/20 md:border-green-500/20 md:hover:border-green-500/50 dark:md:border-green-500/10 dark:md:hover:border-green-500/30',
+              'border-orange-500/40 dark:border-orange-500/20 md:border-orange-500/20 md:hover:border-orange-500/50 dark:md:border-orange-500/10 dark:md:hover:border-orange-500/30'
             ];
             const cardBg = [
-              'group-hover:bg-blue-50/30 dark:group-hover:bg-blue-500/5',
-              'group-hover:bg-purple-50/30 dark:group-hover:bg-purple-500/5',
-              'group-hover:bg-green-50/30 dark:group-hover:bg-green-500/5',
-              'group-hover:bg-orange-50/30 dark:group-hover:bg-orange-500/5'
+              'bg-blue-50/40 dark:bg-blue-500/10 md:bg-transparent md:group-hover:bg-blue-50/30 dark:md:group-hover:bg-blue-500/5',
+              'bg-purple-50/40 dark:bg-purple-500/10 md:bg-transparent md:group-hover:bg-purple-50/30 dark:md:group-hover:bg-purple-500/5',
+              'bg-green-50/40 dark:bg-green-500/10 md:bg-transparent md:group-hover:bg-green-50/30 dark:md:group-hover:bg-green-500/5',
+              'bg-orange-50/40 dark:bg-orange-500/10 md:bg-transparent md:group-hover:bg-orange-50/30 dark:md:group-hover:bg-orange-500/5'
             ];
             const colorIdx = idx % colors.length;
 
@@ -199,8 +199,8 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.items.map((project: Project, pIdx) => (
                     <div key={pIdx} className={`group p-5 rounded-xl border ${colors[colorIdx]} transition-all duration-300 shadow-sm hover:shadow-md flex flex-col ${cardBg[colorIdx]}`}>
-                      <div className="text-2xl mb-3 filter grayscale group-hover:grayscale-0 transition-all">{project.icon}</div>
-                      <h4 className="text-lg font-bold mb-2 group-hover:text-notion-text transition-colors">{project.title}</h4>
+                      <div className="text-2xl mb-3 filter grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all">{project.icon}</div>
+                      <h4 className="text-lg font-bold mb-2 text-notion-text transition-colors">{project.title}</h4>
                       <p className="text-sm text-notion-gray mb-4 leading-relaxed line-clamp-3 flex-grow">
                         {project.description}
                       </p>
@@ -275,12 +275,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-24 pt-12 border-t border-notion-border text-center">
         <p className="text-sm text-notion-gray">
-          © {new Date().getFullYear()} Ammar Khan • Built with Next.js and ❤️
+          © {new Date().getFullYear()} Ammar Khan
         </p>
       </footer>
 
       {/* Floating Back to Top Button */}
-      <button 
+      <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 p-3 rounded-full bg-notion-bg border border-notion-border shadow-lg text-notion-gray hover:text-notion-text hover:border-blue-500/50 transition-all hover:-translate-y-1 z-40"
       >
